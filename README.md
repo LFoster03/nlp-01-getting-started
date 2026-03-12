@@ -141,7 +141,9 @@ git push -u origin main
 - To improve the quality of the analysis, the script was modified to remove common English stopwords during the text-cleaning stage. Examples include words like this, that, with, from, and have. Removing these words helps ensure the analysis focuses on terms that better represent the actual content of the page.
   1. Add a Stopwords list before the text-cleaning logic of common English stopwords.
   2. Modify the cleaning logic to filter out stopwords.
+- Observation: More of the technical words are shown instead of filler words.
 
 ### Additional Modification: Average Word Length
 
 - An additional analytical metric was added to the script to calculate the average word length of the cleaned text. After the text cleaning stage, the script computes the average number of characters per word using the cleaned word list. Longer average word lengths can indicate more technical or specialized vocabulary, while shorter averages may indicate simpler language.
+- Observation: Average word length is 7.54 characters meaning that there are longer words. This shows that the words may be more technical.
