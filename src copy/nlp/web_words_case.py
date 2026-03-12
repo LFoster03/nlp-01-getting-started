@@ -123,6 +123,32 @@ text: str = soup.get_text(separator=" ", strip=True)
 print("First 1000 characters of extracted text:")
 print(text[:1000])
 
+# Common English stopwords to remove
+STOPWORDS: set[str] = {
+    "this",
+    "that",
+    "with",
+    "from",
+    "have",
+    "were",
+    "been",
+    "their",
+    "they",
+    "them",
+    "then",
+    "than",
+    "into",
+    "also",
+    "such",
+    "only",
+    "about",
+    "over",
+    "some",
+    "many",
+    "most",
+    "other",
+    "more",
+}
 
 # ============================================================
 # Section 5. Clean the Text (split, lowercase, remove punctuation)
@@ -146,13 +172,24 @@ words = [word.lower() for word in words]
 # Keep only tokens longer than 3 characters to reduce noise.
 # Again, a list comprehension is great for simple list-to-list transformations.
 clean_words: list[str] = [
-    word.strip(".,:;!?()[]\"'") for word in words if len(word) > 3
+    word.strip(".,:;!?()[]\"'")
+    for word in words
+    if len(word) > 3 and word not in STOPWORDS
 ]
 count_of_clean_words: int = len(clean_words)
 
 print("First 20 cleaned words:")
 print(clean_words[0:20])
 print(f"Total cleaned words: {count_of_clean_words:,}")
+
+# ============================================================
+# Section 5B. Calculate Average Word Length
+# ============================================================
+
+# Calculate the average number of characters per cleaned word
+avg_word_length: float = sum(len(word) for word in clean_words) / len(clean_words)
+
+print(f"Average word length: {avg_word_length:.2f} characters")
 
 
 # ============================================================

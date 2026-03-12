@@ -130,3 +130,18 @@ git push -u origin main
 ## Example Artifact (Output)
 
 ![Word Cloud Example](docs/images/word_cloud_example.png)
+
+## Modifications
+
+- First, copy the folders notebooks and src.
+- Then make modifications to give a better analysis.
+
+### Stopword Filtering
+
+- To improve the quality of the analysis, the script was modified to remove common English stopwords during the text-cleaning stage. Examples include words like this, that, with, from, and have. Removing these words helps ensure the analysis focuses on terms that better represent the actual content of the page.
+  1. Add a Stopwords list before the text-cleaning logic of common English stopwords.
+  2. Modify the cleaning logic to filter out stopwords.
+
+### Additional Modification: Average Word Length
+
+- An additional analytical metric was added to the script to calculate the average word length of the cleaned text. After the text cleaning stage, the script computes the average number of characters per word using the cleaned word list. Longer average word lengths can indicate more technical or specialized vocabulary, while shorter averages may indicate simpler language.
