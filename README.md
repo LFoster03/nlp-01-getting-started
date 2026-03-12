@@ -1,4 +1,6 @@
 # nlp-01-getting-started
+## Author: Lindsay Foster
+## Date: March 2026
 
 [![Python 3.14+](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](#)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
@@ -147,3 +149,13 @@ git push -u origin main
 
 - An additional analytical metric was added to the script to calculate the average word length of the cleaned text. After the text cleaning stage, the script computes the average number of characters per word using the cleaned word list. Longer average word lengths can indicate more technical or specialized vocabulary, while shorter averages may indicate simpler language.
 - Observation: Average word length is 7.54 characters meaning that there are longer words. This shows that the words may be more technical.
+
+## Notebook Modifications
+1. Average Word Length
+- Calculated the average word length for all cleaned words in the text.
+- Provides an additional metric for exploring text characteristics and vocabulary complexity.
+
+2. Word Cloud Enhancement
+- Generated a word cloud directly from word frequencies.
+- Visualizes which words appear most often on the webpage.
+- Allows quick insight into dominant topics and common terms.
