@@ -150,7 +150,7 @@ git push -u origin main
 - An additional analytical metric was added to the script to calculate the average word length of the cleaned text. After the text cleaning stage, the script computes the average number of characters per word using the cleaned word list. Longer average word lengths can indicate more technical or specialized vocabulary, while shorter averages may indicate simpler language.
 - Observation: Average word length is 7.54 characters meaning that there are longer words. This shows that the words may be more technical.
 
-![Modified Word Cloud](C:\Repos\nlp-01-getting-started\docs\images\Modified_word_cloud.png)
+[Modified Word Cloud](\docs\images\Modified_word_cloud.png)
 
 ## Notebook Modifications
 1. Average Word Length
